@@ -20,7 +20,7 @@ class Weather {
       console.log(data);
       this.current.querySelector(".temp").innerText = `${data.main.temp.toFixed(0)}℃`
       this.current.querySelector(".condition").innerText = `${data.weather[0].description}`
-      this.current.querySelector("img").src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      this.current.querySelector("img").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     })
   }
 
@@ -62,7 +62,7 @@ class Weather {
       day.querySelector(".low").innerText = `${lows[i][0].toFixed(0)}℃`;
 
       let num = Math.floor(Math.random() * days[i].length)  
-      day.querySelector("img").src = `http://openweathermap.org/img/wn/${days[i][num].weather[0].icon}@2x.png`;
+      day.querySelector("img").src = `https://openweathermap.org/img/wn/${days[i][num].weather[0].icon}@2x.png`;
       day.querySelector(".description").innerText = `${days[i][num].weather[0].description}`;
     }
   }
