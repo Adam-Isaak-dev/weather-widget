@@ -4,6 +4,8 @@
 2. using the users geolocation request the current weather and update the HTML accordingly
 3. using the users geolocation request the 5day weather and update the HTMl accordingly
 
+Website Deployed at: https://adam-isaak-weather.netlify.app/
+
 ## Assignment Notes
 ### Set-up & Instructions
 Build and deploy a weather widget that uses the [navigator geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API) to determine the users location and uses that location to obtain the current weather and a 5 day forecast for their region.
