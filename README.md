@@ -1,8 +1,8 @@
 # weather-widget
 ## Project Notes
-1. create a geolocation object based on the user location.
-2. using the users geolocation request the current weather and the next 5 days weather, using the API.
-3. Update the screen according to the data. (`insertAdjacentHTML`  using string literal syntax etc.)
+1. get the users geolocation
+2. using the users geolocation request the current weather and update the HTML accordingly
+3. using the users geolocation request the 5day weather and update the HTMl accordingly
 
 ## Assignment Notes
 ### Set-up & Instructions
