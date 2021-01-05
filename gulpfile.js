@@ -4,7 +4,6 @@ const cssnano = require ('cssnano');
 const autoprefixer = require ('autoprefixer'); 
 const sourcemaps = require ('gulp-sourcemaps');
 const concat = require('gulp-concat');
-const imagemin = require('gulp-imagemin');
 const terser = require('gulp-terser');
 const clean = require('gulp-clean');
 
@@ -29,7 +28,7 @@ function cssTask() {
 }
 
 function jsTask() {
-  return src(['src/js/upgrades.js', 'src/js/auto-clickers.js', 'src/js/*.js'])
+  return src('src/js/*.js')
     .pipe(sourcemaps.init())
     .pipe(terser())
     .pipe(concat('all.js'))
@@ -37,14 +36,7 @@ function jsTask() {
     .pipe(dest('dist/js'))
 }
 
-function imageTask() {
-  return src('src/images/*')
-  .pipe(imagemin())
-  .pipe(dest('dist/images'))
-}
-
 exports.html = htmlTask;
 exports.css = cssTask;
 exports.js = jsTask;
-exports.images = imageTask;
-exports.default = series(cleanTask, htmlTask, parallel(cssTask, jsTask, imageTask));
+exports.default = series(cleanTask, htmlTask, parallel(cssTask, jsTask));
